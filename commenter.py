@@ -14,10 +14,10 @@ class CafeCommenter:
         self.driver.get(login_url)
         input('네이버 로그인 후 엔터키를 입력해주세요....')
 
-        # self.cafe_id = int(input('cafe id 를 입력해주세요 : '))
-        self.cafe_id = 27549420
-        # self.board_id = int(input('게시판 id 를 입력해주세요 : '))
-        self.board_id = 103
+        self.cafe_id = int(input('cafe id 를 입력해주세요 : '))
+        # self.cafe_id = 27549420
+        self.board_id = int(input('게시판 id 를 입력해주세요 : '))
+        # self.board_id = 103
         self.comment_msg = input('댓글 내용을 입력해주세요 : ')
         
         view_type = 'L'
@@ -26,7 +26,6 @@ class CafeCommenter:
         self.cookies = self.get_cookies_for_requests(self.driver.get_cookies())
 
         self.driver.get(self.base_url)
-
 
     def get_cookies_for_requests(self, cookies):
         """
