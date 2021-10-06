@@ -86,3 +86,7 @@ class CafeCommenter:
         url += '?clubid={}&page=1&boardtype=L&articleid={}&referrerAllArticles=false'\
         .format(self.cafe_id, article_id)
         self.driver.get(url)
+        
+if __name__ == '__main__':
+    commenter = CafeCommenter()
+    commenter.get_first_article()
